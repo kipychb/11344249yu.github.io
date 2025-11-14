@@ -1,0 +1,544 @@
+html {
+    scroll-behavior: smooth;/*能順暢的滑到想要的區塊*/
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #F7F4EA; 
+    color:  #4a4639;  
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px; 
+    min-height: auto;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    margin: 50px 0 40px;
+    font-size: 40px;
+    color: #4a4639; 
+    border-bottom: 3px solid #A8BBA3; 
+    padding-bottom: 15px;
+}
+
+a {
+    color: #B87C4C; 
+    text-decoration: none;
+    transition: color 0.3s ease;/* 讓連結文字顏色變化時更平滑 */
+}
+
+a:hover {
+    color: #A36940;
+    text-decoration: none;
+}
+
+.a-section {
+    padding-top: 150px; 
+    padding-bottom: 50px;
+}
+
+.a-section .container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.myphoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px  #EBD9D1, 0 0 0 10px  #A8BBA3;
+    overflow: hidden;
+    flex-shrink: 0; 
+}
+
+.myphoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    background-color: #F7F4EA; 
+    display: block;
+}
+
+.intro-text h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #4a4639;
+}
+
+.intro-text p.tagline {
+    font-size: 21px;
+    color: #B87C4C; 
+    font-weight: 530;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.aboutme-text {
+    font-size: 18px;
+    color:#4a4639;
+    font-weight:500; 
+    line-height: 1.8;
+    max-width: 600px; 
+    margin: 0;
+    text-align: left;
+}
+
+.nav {
+    background-color: #A8BBA3;
+    padding: 15px 0;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    max-width: 1100px; 
+}
+
+.nav a {
+    color: #FFFFFF; 
+    font-weight: 650; 
+    font-size: 20px; 
+    padding: 5px 15px; 
+    display: flex; 
+    align-items: center;
+    transition: all 0.3s ease;/*讓導覽列連結變化時更平滑 */
+}
+
+.nav a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #B87C4C; 
+    background-color: transparent;
+    transform: translateY(-2px);
+}
+
+.skills-section {
+    padding: 40px 0;
+}
+
+.skill-a {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.skill-b {
+    background-color: #EBD9D1;
+    padding: 10px; 
+    border-radius: 12px; 
+    flex: 1 1 30%; 
+    min-width: 250px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08); 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;/*讓技能區塊在滑鼠移入時有平滑的變形和陰影變化 */
+}
+
+.skill-b:hover {
+    transform: translateY(-5px);/*滑鼠移入時，區塊向上微移 5px */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.skill-b h3 {
+    margin-top: 0px;
+    padding:10px 0;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(168, 187, 163, 0.5); 
+    padding-bottom: 10px;
+    color: #A8BBA3; 
+}
+
+.skill-item {
+    margin: 0 10px 15px; 
+    text-align: left;
+    border-bottom: 1px dashed rgba(51, 51, 51, 0.1);
+}
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+.skill-item p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    height: 12px; 
+    background-color: #F7F4EA; 
+    border: 1px solid #A8BBA3; 
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #A8BBA3; 
+    border-radius: 5px;
+    width: 0;  
+}
+/* 載入後直接顯示最終寬度。 */
+.htmlcss { width: 85%; }
+.js { width: 75%; }
+.python { width: 70%; } 
+.uiux { width: 80%; }
+.figma { width: 85%; }
+.canva { width: 90%; } 
+.teamwork { width: 85%; }
+.discussing { width: 90%; } 
+.problemsolving { width: 85%; } 
+
+
+.experience-section {
+    padding: 60px 0;
+}
+
+.experience-grid {
+    display: flex; 
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience-item {
+    background-color: #EBD9D1; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    padding: 20px; 
+    gap: 30px;
+}
+
+.project-image{
+    flex: 0 0 35%; 
+    max-width: 35%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s ease;/*讓圖片在滑鼠移入時有平滑的放大效果 */
+}
+
+.project-image:hover {
+    transform: scale(1.05);/*滑鼠移入時，圖片放大 5% */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-description {
+    flex: 1 1 60%; 
+    padding: 10px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.project-description h3 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #4a4639;
+}
+
+.project-description p {
+    font-size: 16px;
+    font-weight: 500;
+    color:#4a4639; 
+    margin-bottom: 20px;
+}
+
+pre {
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 12px;
+    border-left: 3px solid #A8BBA3; 
+    font-size: 16.5px; 
+    white-space: pre-wrap;
+    width: 100%; 
+    box-sizing: border-box;
+    font-weight: 450;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #B87C4C; 
+    color: #FFFFFF; 
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;/*讓按鈕的背景色和變形效果有平滑的過渡 */
+    margin-top: 20px; 
+    margin-left: auto; 
+}
+
+.project-link:hover {
+    background-color: #A36940; 
+    transform: translateY(-2px);/*滑鼠移入時，按鈕向上微移 2px */
+    color: #FFFFFF;
+}
+
+.contact-section {
+    background-color: #A8BBA3; 
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #FFFFFF; 
+    margin-bottom: 25px;
+    border-bottom: 3px solid #B87C4C; 
+    display: inline-block;
+}
+
+.contact-content-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start; 
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 40px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    color: #FFFFFF; 
+}
+
+.contact-info {
+    flex: 1 1 50%;
+    text-align: left; 
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 17px;
+    margin-right: 10px;
+    color: #B87C4C;
+}
+
+.contact-info .contact-label {
+    color: #B87C4C; 
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.contact-info a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    transition: color 0.3s ease;/*讓聯絡資訊連結顏色變化時更平滑 */
+}
+
+.contact-info a:hover {
+    color: #B87C4C; 
+}
+
+.contact-form {
+    flex: 1 1 50%;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    gap: 10px;
+}
+
+/* 聯絡區塊裝飾：貓咪 ASCII 圖案 */
+/* 聯絡區塊背景與定位設定 */
+.contact-section {
+    background-color: #A8BBA3;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative; /* 讓 ::before 與 ::after 能定位 */
+    overflow: hidden;
+}
+
+/* 聯絡區塊裝飾：混合 ASCII 圖案(左上貓咪 / 右下幸運草)*/
+/* 圖案變數定義 */
+:root {
+/* 1. 左上角圖案 */
+    --cat-pattern: "⠀⢠⡾⠲⠶⣤⣀⣠⣤⣤⣤⡿⠛⠿⡴⠾⠛⢻⡆\A⠀⠀⠀⣼⠁⠀⠀⠀⠉⠁⠀⢀⣿⠐⡿⣿⠿⣶⣤⣤⣷⡀\A⠀⠀⠀⢹⡶⠀⠀⠀⠀⠀⠀⠈⢯⣡⣿⣿⣀⣸⣿⣦⢓⡟\A⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠹⣍⣭⣾⠁\A⠀⣀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⣷⣤⡀\A⠈⠉⠹⣏⡁⠀⢸⣿⠀⠀⠀⢀⡀⠀⠀⠀⣿⠆⠀⢀⣸⣇⣀\A⠀⠐⠋⢻⣅⣄⢀⣀⣀⡀⠀⠯⠽⠂⢀⣀⣀⡀⠀⣤⣿⠀⠉\A⠀⠀⠴⠛⠙⣳⠋⠉⠉⠙⣆⠀⠀⢰⡟⠉⠈⠙⢷⠟⠉⠙⠂\A⠀⠀⠀⠀⠀⢻⣄⣠⣤⣴⠟⠛⠛⠛⢧⣤⣤⣀⡾";
+ /*右下角圖案*/
+ --contact-decor-right: "⠀⠀⠀⠀⠀⠀⢀⣤⣿⣶⣄⠀⠀⠀⣀⡀⠀⠀⠀⠀\A⠀⠀⣠⣤⣄⡀⣼⣿⣿⣿⣿⠀⣠⣾⣿⣿⡆⠀⠀⠀\A⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣧⣄⡀⠀\A⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄\A⠀⠀⣀⣤⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃\A⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡉⠀⠀\A⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄\A⠀⠀⠉⣸⣿⣿⣿⣿⠏⢸⡏⣿⣿⣿⣿⣿⣿⣿⣿⡏\A⠀⠀⠀⢿⣿⣿⡿⠏⠀⢸⣇⢻⣿⣿⣿⣿⠉⠉⠁⠀\A⠀⠀⠀⠀⠈⠁⠀⠀⠀⠸⣿⡀⠙⠿⠿⠋⠀⠀⠀⠀\A⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡀⠀⠀⠀⠀⠀⠀⠀";
+}
+
+.contact-section::before {
+    content: var(--cat-pattern);
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    color:#F7F4EA;
+    font-size: 8px;
+    line-height: 1;
+    white-space: pre;
+    z-index: 1;
+    transform: rotate(-15deg);
+    opacity: 1;
+}
+
+.contact-section::after {
+    content: var(--contact-decor-right); 
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    color: #F7F4EA;
+    font-size: 7px; 
+    line-height: 1;
+    white-space: pre;
+    z-index: 1;
+    transform: rotate(10deg);
+    opacity: 1.0;
+}
+
+.contact-section form input, .contact-section form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.contact-section form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-section form button {
+    padding: 12px;
+    background-color: #B87C4C; 
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;/*讓按鈕背景色變化時更平滑 */
+}
+
+.contact-section form button:hover {
+    background-color: #A36940; 
+}
+
+.footer{
+    background-color: #EBD9D1;
+    color: #4a4639;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+/* RWD 響應式調整 */
+@media (max-width: 900px) {
+
+    /* Header 調整 */
+    .a-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-text {
+        margin-left: 0;
+    }
+    .aboutme-text {
+        text-align: center;
+    }
+
+    /* Nav 調整 */
+    .nav .container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 10px;
+        flex-wrap: nowrap;
+    }
+    .nav a {
+        flex-shrink: 0;
+    }
+
+    /* Skills 調整  */
+    .skill-a {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-b {
+        width: 100%; 
+        flex: 1 1 100%; 
+    }
+
+    /* Experience 調整 */
+    /* 手機上垂直堆疊 */
+    .experience-item {
+        flex-direction: column; 
+        padding: 15px;
+    }
+    .project-image {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .project-link {
+        margin-left: unset; 
+        margin: 15px auto 0 auto; 
+    }
+
+    /* Contact 調整 */
+    .contact-content-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding: 30px 15px; 
+    }
+
+    .contact-section::before, 
+    .contact-section::after {
+        content: none; 
+    }
+
+    .contact-info {
+        width: 100%; 
+        max-width: 350px; 
+        padding-left: 0; 
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 350px; 
+    }
+    .contact-info p {
+        justify-content: center; 
+    }
+
+    /* Footer 調整 */
+    .footer {
+        padding: 0 10px;
+    }
+}
